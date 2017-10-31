@@ -2,6 +2,7 @@
 Generates a hierarchy of Confluence pages in a tree format using Python 2.7.X.
 
 Example output:
+
 ![Output Example](https://s3.us-east-2.amazonaws.com/toddbirchard-github/Confluence+Hierarchy/output.png)
 
 ## Dependencies
