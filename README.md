@@ -1,9 +1,9 @@
 # Confluence Hierarchy Builder
 Generates a hierarchy of Confluence pages in a tree format using Python 2.7.X.
 
-Example output:
+## Example output
 
-![Output Example](https://s3.us-east-2.amazonaws.com/toddbirchard-github/Confluence+Hierarchy/output.png)
+![Output Example](https://s3.us-east-2.amazonaws.com/toddbirchard-github/Confluence+Hierarchy/output2.png)
 
 ## Dependencies
 1. Confluence Python CLI: https://github.com/RaymiiOrg/confluence-python-cli
