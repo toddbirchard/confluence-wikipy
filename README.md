@@ -10,7 +10,7 @@ Confluence Hierarchy Builder is useful for large Confluence instances which have
 ## Dependencies
 1. Confluence Python CLI: https://github.com/RaymiiOrg/confluence-python-cli
 2. Pandas: https://pandas.pydata.org/
-3. http://treelib.readthedocs.io/en/latest/install.html
+3. Treelib: http://treelib.readthedocs.io/en/latest/install.html
 4. A user with access to the target Confluence instance
 
 ## Usage
@@ -21,11 +21,13 @@ Confluence Hierarchy Builder is useful for large Confluence instances which have
 5. Run 'python confTree.py'
 
 ## Things to note
-- Ensure that the contents of 'listpages' from confluence.py are saved as a file named confluence.csv
+- Ensure that the contents of 'listpages' (from confluence.py) are saved as a file named confluence.csv
 - Confluence Hierarchy Builder currently builds three heirarchies deep into each space, but is easily modified to include more
 - A Confluence instance of 10,000 pages will take roughly 10-15 minutes to process
 
 # Coming updates
 - A visual interface
-- In-depth instructions and explanations of source code
+- In-depth instructions
+- Documentation of source code
 - Support for a variable number of hierarchies
+- Python 3 support
