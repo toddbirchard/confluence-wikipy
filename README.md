@@ -5,7 +5,7 @@ Confluence Hierarchy Builder is useful for large Confluence instances which have
 
 ## Example output
 
-![Output Example](https://s3.us-east-2.amazonaws.com/toddbirchard-github/Confluence+Hierarchy/output2.png)
+![Output Example](https://s3.us-east-2.amazonaws.com/toddbirchard-github/Confluence+Hierarchy/output3.png)
 
 ## Dependencies
 1. Confluence Python CLI: https://github.com/RaymiiOrg/confluence-python-cli
