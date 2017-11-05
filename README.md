@@ -4,7 +4,6 @@ Generates a hierarchy of Confluence pages in a tree format using Python 2.7.X.
 Confluence Hierarchy Builder is useful for large Confluence instances which have grown past the point of reasonable maintence. While Atlassian supports HTML, XML, and PDF exports of Confluence, these exports exist only on a per-space or per-page basis. For organizations with hundreds of spaces (which is fairly common) there is no other tool which allows users to build a visual heirarchy of their own Confluence.
 
 ## Example output
-
 ![Output Example](https://s3.us-east-2.amazonaws.com/toddbirchard-github/Confluence+Hierarchy/output3.png)
 
 ## Dependencies
@@ -21,8 +20,8 @@ Confluence Hierarchy Builder is useful for large Confluence instances which have
 5. Run 'python confTree.py'
 
 ## Things to note
-- Ensure that the contents of 'listpages' (from confluence.py) are saved as a file named confluence.csv
-- Confluence Hierarchy Builder currently builds four heirarchies deep into each space, but is easily modified to include more
+- Ensure that the contents of 'listpages' (from confluence.py) are saved as a file named confluence.csv (this should replace the example confluence.csv provided here)
+- Confluence Hierarchy Builder builds four heirarchies deep into each space, but can be easily modified to include more
 - A Confluence instance of 10,000 pages will take roughly 10-15 minutes to process
 
 # Coming updates
