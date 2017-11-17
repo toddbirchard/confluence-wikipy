@@ -13,11 +13,22 @@ Confluence Hierarchy Builder is useful for large Confluence instances which have
 4. A user with access to the target Confluence instance
 
 ## Usage
-1. Use Confluence Python CLI to generate a CSV of pages from your Confluence instance
-2. Add labels to CSV: 'id', 'space', 'parent', 'name', 'url'
-3. Ensure CSV lives in same directory as conf.py
-4. CD to directory
-5. Run 'python confTree.py'
+1. Use Confluence Python CLI to generate a CSV of pages from your Confluence instance":
+
+   python confluence.py --help                                                                                         
+   confluence.py [-h] -w WIKIURL -u USERNAME -p PASSWORD
+   
+   {addpage, updatepage, listpages, removepage, getpagecontent, getpagesummary, listspaces, addspace, removespace, adduser,    removeuser, deactivateuser, reactivateuser, changeuserpassword, addgroup, removegroup, listgroups, listusers, 
+   getallpages, addusertogroup, removeusergromgroup, listusergroups}
+
+2. Add labels to generated CSV
+
+    Ensure this follows the format: 'id', 'space', 'parent', 'name', 'url'
+    NOTE: Check CSV to ensure data is not broken; commas in page titles will break the CSV.
+
+4. Run 'python confTree.py'
+
+    As long as the generated CSV is formatted correctly and lives in the same directory as confTree.py, this should run as  expected.
 
 ## Things to note
 - Ensure that the contents of 'listpages' (from confluence.py) are saved as a file named confluence.csv (this should replace the example confluence.csv provided here)
