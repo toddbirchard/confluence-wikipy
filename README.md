@@ -36,8 +36,9 @@ Confluence Hierarchy Builder is useful for large Confluence instances which have
 - A Confluence instance of 10,000 pages will take roughly 10-15 minutes to process
 
 # Coming updates
-- A visual interface
-- In-depth instructions
-- Documentation of source code
-- Support for a variable number of hierarchies
 - Python 3 support
+- Flask web interface
+- Documentation of source code
+- Detect number of hierarchies
+- Built-in API handling
+
