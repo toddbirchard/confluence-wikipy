@@ -1,10 +1,35 @@
-# Confluence Hierarchy Builder
+# Wikipy
 Generates a hierarchy of Confluence pages in a tree format using Python 2.7.X.
 
 Confluence Hierarchy Builder is useful for large Confluence instances which have grown past the point of reasonable maintence. While Atlassian supports HTML, XML, and PDF exports of Confluence, these exports exist only on a per-space or per-page basis. For organizations with hundreds of spaces (which is fairly common) there is no other tool which allows users to build a visual heirarchy of their own Confluence.
 
 ## Example output
-![Output Example](https://s3.us-east-2.amazonaws.com/toddbirchard-github/Confluence+Hierarchy/output3.png)
+├── **Meaty Meats**    
+│   ├── Spicy jalapeno bacon ipsum dolor amet chicken doner corned beef sirloin   
+│   ├── Hamburger picanha cow pork chop chicken   
+│   ├── Porchetta tongue landjaeger doner salami pork loin   
+│   ├── Ribeye filet mignon capicola   
+│   ├── Kevin bacon ham hock meatball swine   
+│   ├── How-to recipes   
+│   │   ├── Ham hock ground round t-bone corned beef   
+│   │   ├── Shoulder frankfurter corned beef alcatra jerky beef   
+│   │   ├── Rump beef venison fatback chicken beef ribs brisket   
+│   │   ├── Meatball landjaeger short loin   
+│   │   ├── Capicola picanha meatloaf beef pork   
+│   │   ├── Bacon salami ham frankfurter   
+│   │   └── Strip steak rump    
+│   ├── Beefy Requirements   
+│   │   ├── Picanha tongue biltong brisket short loin   
+│   │   ├── Filet mignon kevin spare ribs   
+│   │   └── Pancetta shoulder ham   
+│   └── Beef sausage   
+├── **Bacons**   
+│   ├── Bacon salami ham frankfurter   
+│   ├── Kevin bacon ham   
+│   ├── ham hock pork loin   
+│   └── Porchetta tongue   
+└── **Animals**   
+    └── Bresaola bacon corned beef    
 
 ## Dependencies
 1. Confluence Python CLI: https://github.com/RaymiiOrg/confluence-python-cli
@@ -35,10 +60,9 @@ Confluence Hierarchy Builder is useful for large Confluence instances which have
 - Confluence Hierarchy Builder builds four heirarchies deep into each space, but can be easily modified to include more
 - A Confluence instance of 10,000 pages will take roughly 10-15 minutes to process
 
-# Coming updates
-- Python 3 support
-- Flask web interface
-- Documentation of source code
-- Detect number of hierarchies
-- Built-in API handling
+# Coming Updates
+- Python 3 rewrite
+- Documentation
+- Dynamic level detection
+- Extended API features
 
