@@ -1,21 +1,9 @@
-#!/usr/bin/env python
-# Copyright (C) 2013  Remy van Elst
+# Wikipy
 
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
+# This project is axctively in development
 
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-import sys, xmlrpclib, argparse, string, logging
-
+import sys, xmlrpc, argparse, string, logging
+import xmlrpc.client
 #
 # Logging
 #
@@ -318,10 +306,11 @@ def Content(args):
 
 def Connect(args):
     wiki_url = args.wikiurl + "/rpc/xmlrpc"
-    xml_server = xmlrpclib.Server(wiki_url)
+    xml_server = xmlrpc.client.ServerProxy(wiki_url)
+    print(xml_server)
     try:
         token = ConfluenceAuth(xml_server,args.username,args.password).login()
-    except xmlrpclib.Fault as err:
+    except xmlrpc.client.Fault as err:
         error_out("%d: %s" % ( err.faultCode, err.faultString))
     return {"token":token,"xml_server":xml_server}
 
@@ -352,8 +341,8 @@ def Actions(token,xml_server,args,content):
 
         elif args.action == "getpagesummary":
             page = ConfluencePage(token,xml_server,args.name,args.spacekey,content).get()
-            print args.delimiter.join((
-             page['id'], page['space'], page['parentId'], page['title'], page['url']))
+            print(args.delimiter.join((
+             page['id'], page['space'], page['parentId'], page['title'], page['url'])))
 
         elif args.action == "listpages":
             if args.spacekey == "":
@@ -363,8 +352,8 @@ def Actions(token,xml_server,args,content):
             for space in spaces:
                 all_pages = ConfluenceSpace(token,xml_server).get_all_pages(space['key'])
                 for page in all_pages:
-                    print args.delimiter.join((
-                     page['id'], page['space'], page['parentId'], page['title'], page['url']))
+                    print(args.delimiter.join((
+                     page['id'], page['space'], page['parentId'], page['title'], page['url'])))
 
         elif args.action == "removepage":
             removed_page = ConfluencePage(token,xml_server,args.name,args.spacekey,"").remove()
@@ -447,7 +436,7 @@ def Actions(token,xml_server,args,content):
             for group in user_groups:
                 print(group)
 
-    except xmlrpclib.Fault as err:
+    except xmlrpc.Fault as err:
         print(("Error: %d: %s") % (err.faultCode, err.faultString))
 
 def main():
