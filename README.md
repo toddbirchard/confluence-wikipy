@@ -1,7 +1,10 @@
 # Wikipy
-Generates a hierarchy of Confluence pages in a tree format using Python 2.7.X.
 
-Confluence Hierarchy Builder is useful for large Confluence instances which have grown past the point of reasonable maintence. While Atlassian supports HTML, XML, and PDF exports of Confluence, these exports exist only on a per-space or per-page basis. For organizations with hundreds of spaces (which is fairly common) there is no other tool which allows users to build a visual heirarchy of their own Confluence.
+![python badge](https://img.shields.io/badge/python-3.6-blue.svg?longCache=true&style=flat-square) ![pandas badge](https://img.shields.io/badge/pandas-0.22.0-blue.svg?longCache=true&style=flat-square) ![treelib badge](https://img.shields.io/badge/treelib-1.4.0-blue.svg?longCache=true&style=flat-square) ![xmlrpc badge](https://img.shields.io/badge/xmlrpc.client-21.26.-blue.svg?longCache=true&style=flat-square) ![MIT badge](https://img.shields.io/badge/license-MIT-green.svg?longCache=true&style=flat-square) ![Confluence badge](https://img.shields.io/badge/platform-Confluence-lightgray.svg?longCache=true&style=flat-square)
+
+Python 3 CLI for interacting with Confluence API.
+
+Wikipy's tree builder is useful for large Confluence instances which have grown past the point of reasonable maintence. While Atlassian supports HTML, XML, and PDF exports of Confluence, these exports exist only on a per-space or per-page basis. For organizations with hundreds of spaces (which is fairly common) there is no other tool which allows users to build a visual heirarchy of their own Confluence.
 
 ## Example output
 ├── **Meaty Meats**    
